@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "installed": {
+    "using-superpowers": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/obra/superpowers/using-superpowers",
+      "trust_level": "community",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:24ede4abbf638ec0",
+      "install_path": "using-superpowers",
+      "files": [
+        "SKILL.md",
+        "references/codex-tools.md",
+        "references/copilot-tools.md",
+        "references/gemini-tools.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-04-30T03:18:08.013937+00:00",
+      "updated_at": "2026-04-30T03:18:08.013955+00:00"
+    }
+  }
+}

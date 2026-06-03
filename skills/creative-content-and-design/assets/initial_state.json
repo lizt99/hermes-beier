@@ -1,0 +1,14 @@
+{
+  "world_state.json": {
+    "locations": {},
+    "rules": [],
+    "history": []
+  },
+  "character_matrix.json": {
+    "characters": {}
+  },
+  "subplot_board.json": {
+    "hooks": []
+  },
+  "chapter_summaries.json": []
+}

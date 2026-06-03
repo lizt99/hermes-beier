@@ -1,0 +1,74 @@
+{
+  "caregiver-inquiry-management": {
+    "archived_at": null,
+    "created_at": "2026-05-29T02:30:23.871316+00:00",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": "2026-06-03T15:11:41.293159+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 3
+  },
+  "project-shang-an-content-research-sop": {
+    "archived_at": null,
+    "created_at": "2026-05-02T06:15:44.426828+00:00",
+    "last_patched_at": "2026-05-02T06:54:48.000786+00:00",
+    "last_used_at": null,
+    "last_viewed_at": "2026-05-07T05:00:12.367222+00:00",
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 3
+  },
+  "project-shang-an-execution": {
+    "archived_at": null,
+    "created_at": "2026-04-30T15:02:32.864944+00:00",
+    "last_patched_at": "2026-05-02T06:54:46.984482+00:00",
+    "last_used_at": null,
+    "last_viewed_at": "2026-05-07T05:00:12.381063+00:00",
+    "patch_count": 7,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 12
+  },
+  "social-media-operations": {
+    "archived_at": null,
+    "created_at": "2026-04-30T02:46:36.773272+00:00",
+    "last_patched_at": "2026-06-03T15:16:16.459944+00:00",
+    "last_used_at": null,
+    "last_viewed_at": "2026-06-03T15:16:04.924541+00:00",
+    "patch_count": 25,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 28
+  },
+  "wechat-debt-support-group-ops": {
+    "archived_at": null,
+    "created_at": "2026-05-12T10:24:35.765208+00:00",
+    "last_patched_at": "2026-05-12T10:25:25.768107+00:00",
+    "last_used_at": null,
+    "last_viewed_at": "2026-05-14T05:01:11.564786+00:00",
+    "patch_count": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 8
+  },
+  "youjia-caregiver-social-ops": {
+    "archived_at": null,
+    "created_at": "2026-06-03T15:19:56.213728+00:00",
+    "last_patched_at": "2026-06-03T15:40:51.917702+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 7,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  }
+}

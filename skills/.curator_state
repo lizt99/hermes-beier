@@ -1,0 +1,8 @@
+{
+  "last_report_path": "/home/mspbots/.hermes/logs/curator/20260528-015517",
+  "last_run_at": "2026-05-28T01:55:17.511374+00:00",
+  "last_run_duration_seconds": 49.114333,
+  "last_run_summary": "auto: no changes; llm: **Curation Complete: Clean State Verified**\n\nA thorough scan of the candidate list reveals that a previous curation pass has already successfully consolidated all narrow skills into highly structured, class-level umbrellas. There are no rem…",
+  "paused": false,
+  "run_count": 5
+}

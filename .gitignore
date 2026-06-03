@@ -1,0 +1,59 @@
+# Hermes runtime state
+state.db
+state.db-shm
+state.db-wal
+processes.json
+auth.lock
+channel_directory.json
+gateway_state.json
+
+# Config secrets / local overrides
+config.yaml
+
+# Agent source / local clone
+agent/
+hermes-agent/
+
+# Logs
+logs/
+**/logs/
+
+# Sessions and runtime memory
+sessions/
+**/sessions/
+memories/
+**/memories/
+cron/output/
+**/cron/output/
+
+# Locks and temp/runtime files
+.tick.lock
+**/.tick.lock
+*.pid
+*.sock
+*.pyc
+__pycache__/
+
+# Profile-local data
+profiles/*/state.db
+profiles/*/state.db-shm
+profiles/*/state.db-wal
+profiles/*/auth.lock
+profiles/*/gateway_state.json
+profiles/*/channel_directory.json
+profiles/*/memories/
+profiles/*/sessions/
+profiles/*/logs/
+profiles/*/audio_cache/
+profiles/*/cron/output/
+
+# Secrets
+.env
+profiles/*/.env
+
+# History and cache
+.hermes_history
+.skills_prompt_snapshot.json
+.update_check
+gateway.lock
+models_dev_cache.json
