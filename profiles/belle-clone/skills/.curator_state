@@ -1,8 +1,8 @@
 {
-  "last_report_path": "/home/mspbots/.hermes/profiles/belle-clone/logs/curator/20260528-054212",
-  "last_run_at": "2026-05-28T05:42:12.643917+00:00",
-  "last_run_duration_seconds": 65.338651,
-  "last_run_summary": "auto: no changes; llm: I have completed the UMBRELLA-BUILDING consolidation pass on the provided agent-created skills. \n\nSince there were only two agent-created skills in the candidate list, the scope of consolidation was naturally limited, but I successfully cre…",
+  "last_report_path": "/home/mspbots/.hermes/profiles/belle-clone/logs/curator/20260604-054308",
+  "last_run_at": "2026-06-04T05:43:08.197074+00:00",
+  "last_run_duration_seconds": 97.633248,
+  "last_run_summary": "auto: 1 marked stale; llm: I have completed the consolidation pass for the 4 agent-created skills provided in the candidate list. Since the candidate list was small (4 items), the total number of archives is 2, representing a 100% processing rate of the available clu…",
   "paused": false,
-  "run_count": 5
+  "run_count": 6
 }

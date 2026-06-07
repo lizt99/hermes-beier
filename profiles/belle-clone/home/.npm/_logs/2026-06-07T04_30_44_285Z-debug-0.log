@@ -1,0 +1,18 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/mspbots/.hermes/profiles/belle-clone/home/.npmrc
+5 silly config load:file:/usr/etc/npmrc
+6 verbose title npm list
+7 verbose argv "list" "--global" "--depth" "0"
+8 verbose logfile logs-max:10 dir:/home/mspbots/.hermes/profiles/belle-clone/home/.npm/_logs/2026-06-07T04_30_44_285Z-
+9 verbose logfile /home/mspbots/.hermes/profiles/belle-clone/home/.npm/_logs/2026-06-07T04_30_44_285Z-debug-0.log
+10 silly packumentCache heap:2101346304 maxSize:525336576 maxEntrySize:262668288
+11 silly logfile done cleaning log files
+12 verbose cwd /home/mspbots/.hermes/profiles/belle-clone/home/.hermes/profiles/belle-clone/skills/tencent-docs
+13 verbose os Linux 6.17.0-14-generic
+14 verbose node v22.22.0
+15 verbose npm  v10.9.4
+16 verbose exit 0
+17 info ok

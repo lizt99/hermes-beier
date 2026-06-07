@@ -146,6 +146,14 @@ ssh -T git@github.com
 git config --global url."git@github.com:".insteadOf "https://github.com/"
 ```
 
+**Alternative: Repository-Specific Identity (Deploy Keys / Multiple Keys)**
+If the system has multiple SSH keys or the default key triggers `ERROR: Permission to <repo> denied to deploy key`, generate a dedicated key for this repo and force git to use it locally:
+```bash
+ssh-keygen -t ed25519 -C "repo-specific-backup" -f ~/.ssh/id_ed25519_specific -N ""
+# Then in the repository:
+git config core.sshCommand "ssh -i ~/.ssh/id_ed25519_specific -o IdentitiesOnly=yes"
+```
+
 **Step 5: Configure git identity**
 
 ```bash

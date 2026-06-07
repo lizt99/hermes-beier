@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "tencent-docs": {
+      "baseUrl": "https://docs.qq.com/openapi/mcp",
+      "headers": {
+        "Authorization": "ac928a5e4e954491b68030bb0605faf5"
+      }
+    }
+  }
+}

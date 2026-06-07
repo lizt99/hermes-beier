@@ -1,0 +1,19 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/mspbots/.hermes/profiles/belle-clone/home/.hermes/profiles/belle-clone/skills/tencent-docs/.npmrc
+5 silly config load:file:/home/mspbots/.hermes/profiles/belle-clone/home/.npmrc
+6 silly config load:file:/usr/etc/npmrc
+7 verbose title npm config set prefix ~/.npm-global
+8 verbose argv "config" "set" "prefix" "~/.npm-global"
+9 verbose logfile logs-max:10 dir:/home/mspbots/.hermes/profiles/belle-clone/home/.npm/_logs/2026-06-07T04_31_02_425Z-
+10 verbose logfile /home/mspbots/.hermes/profiles/belle-clone/home/.npm/_logs/2026-06-07T04_31_02_425Z-debug-0.log
+11 silly logfile done cleaning log files
+12 info config set "prefix" "~/.npm-global"
+13 verbose cwd /home/mspbots/.hermes/profiles/belle-clone/home/.hermes/profiles/belle-clone/skills/tencent-docs
+14 verbose os Linux 6.17.0-14-generic
+15 verbose node v22.22.0
+16 verbose npm  v10.9.4
+17 verbose exit 0
+18 info ok

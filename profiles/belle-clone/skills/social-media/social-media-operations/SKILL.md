@@ -89,6 +89,13 @@ The specific WeChat debt-support group operating system belongs under this umbre
 - `templates/wechat-daily-command-card.md`
 - `templates/wechat-team-feedback-card.md`
 
+### E. YouJia Caregiver (优加陪护) Social Ops Engine
+The YouJia Caregiver social media lead-generation and conversion engine (focusing on Xiaohongshu and WeChat private domain). Use:
+- `references/youjia-caregiver-social-ops.md` for the core conversion flywheel and data-driven review logic
+- `references/youjia-brand-guidelines.md` and `references/target-audience-analysis.md` for persona/brand context
+- `templates/content-generation-card.md` for generating Xiaohongshu posts
+- `templates/data-review-card.md` for diagnosing post performance
+
 ## References & Tools
 - `references/public-data-antibot-fallbacks.md`: Notes on anti-bot official sites, JS endpoint discovery, and browser snapshot fallback patterns.
 - `references/xhs-technical-notes.md`: Technical hurdles and workarounds for XHS data.
