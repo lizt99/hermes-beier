@@ -32,6 +32,11 @@ metadata:
   👉 Belle 会自动生成包含丰富排版的腾讯智能文档 (Smartcanvas)。
   👉 Belle 会先调用 `tencent-docs` 的 `create_smartcanvas_by_mdx` 生成带排版的文档，然后自动调用 `manage.move_file` 将该帖子移动到腾讯文档 `YJ/HG` 目录下 (Folder ID: `GftErUgfwmaz`)。
   👉 Belle 返回腾讯文档链接给哥哥，哥哥直接点击复制并发布。
+- **指令**：“生成笔记配图” 或 哥哥提供现场照片及护工照片要求生成图片
+  👉 Belle 会调用本技能内置的图片生成脚本 (`scripts/generate_image.py`)。
+  👉 脚本使用 `gemini-3.1-flash-image`，以现场图为背景，将护工人物自然融入，并严格保证马甲上的文字（优加陪护、电话 15793592202）清晰可见。
+  👉 执行示例：`python scripts/generate_image.py --scenes <现场图> --caregivers <护工图> --count 1 --output ./results` （需切换到脚本所在目录或使用绝对路径执行）
+  👉 生成完成后，Belle 将图片以媒体文件形式 (`MEDIA:<path>`) 发送给哥哥。
 - **指令**：“数据复盘” 或 “数据反馈：...” 
   👉 Belle 接收数据反馈，并调用腾讯文档 API 写入或更新 `YJ/HG` 目录下的《优加护工数据看板_V2》(File ID: `GbOKuKxcIplT`, Sheet ID: `BB08J2`)。
   👉 根据播放量、收藏量、私信量进行诊断，并给出下一步行动建议。
