@@ -35,7 +35,9 @@ metadata:
 - **指令**：“生成笔记配图” 或 哥哥提供现场照片及护工照片要求生成图片
   👉 Belle 会调用本技能内置的图片生成脚本 (`scripts/generate_image.py`)。
   👉 脚本使用 `gemini-3.1-flash-image`，以现场图为背景，将护工人物自然融入，并严格保证马甲上的文字（优加陪护、电话 15793592202）清晰可见。
-  👉 执行示例：`python scripts/generate_image.py --scenes <现场图> --caregivers <护工图> --count 1 --output ./results` （需切换到脚本所在目录或使用绝对路径执行）
+  👉 **资产目录**：常用的护工照片（如 `曹双喜.png`）和场景照片（如 `西安国际医学产房.png`）存放在本技能的 `scripts/assets/` 目录下。
+  👉 执行示例：`python3 <绝对路径>/scripts/generate_image.py --scenes <场景图绝对路径> --caregivers <护工图绝对路径> --count 1 --output <绝对路径>/scripts/results` 
+  *(避坑提示：脚本中直接传 URL 下载网络图片可能遇到超时或防盗链问题，建议先使用 `curl -o` 下载到本地，再将本地绝对路径传给 `--scenes` 参数；为了防止超时，运行脚本时可设置 timeout)*
   👉 生成完成后，Belle 将图片以媒体文件形式 (`MEDIA:<path>`) 发送给哥哥。
 - **指令**：“数据复盘” 或 “数据反馈：...” 
   👉 Belle 接收数据反馈，并调用腾讯文档 API 写入或更新 `YJ/HG` 目录下的《优加护工数据看板_V2》(File ID: `GbOKuKxcIplT`, Sheet ID: `BB08J2`)。
