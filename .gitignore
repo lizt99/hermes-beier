@@ -57,3 +57,4 @@ profiles/*/.env
 .update_check
 gateway.lock
 models_dev_cache.json
+profiles/belle-clone/skills/youjia-caregiver-social-ops/scripts/results/

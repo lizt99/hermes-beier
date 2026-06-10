@@ -33,9 +33,11 @@ metadata:
   👉 Belle 会先调用 `tencent-docs` 的 `create_smartcanvas_by_mdx` 生成带排版的文档，然后自动调用 `manage.move_file` 将该帖子移动到腾讯文档 `YJ/HG` 目录下 (Folder ID: `GftErUgfwmaz`)。
   👉 Belle 返回腾讯文档链接给哥哥，哥哥直接点击复制并发布。
 - **指令**：“生成笔记配图” 或 哥哥提供现场照片及护工照片要求生成图片
-  👉 Belle 会调用本技能内置的图片生成脚本 (`scripts/generate_image.py`)。
+  👉 **核心避坑**：绝对禁止使用系统内置的 `image_generate` 工具，必须调用本技能内置的图片生成脚本 (`scripts/generate_image.py`)。
+  👉 **前置确认**：哥哥通常只提供场景简称（如“唐都医院”），执行脚本前务必先通过终端 `ls -la <绝对路径>/scripts/assets/` 查看具体文件名和扩展名（素材可能是 .jpeg, .jpg, .png 或 .webp），切勿盲猜文件名。
   👉 脚本使用 `gemini-3.1-flash-image`，以现场图为背景，将护工人物自然融入，并严格保证马甲上的文字（优加陪护、电话 15793592202）清晰可见。
-  👉 **资产目录**：常用的护工照片（如 `曹双喜.png`）和场景照片（如 `西安国际医学产房.png`）存放在本技能的 `scripts/assets/` 目录下。
+  👉 **资产目录**：常用的护工照片和场景照片存放在本技能的 `scripts/assets/` 目录下。**注意：哥哥会频繁更新、重命名素材**（例如添加 `护工-女-`、`护工-男-` 前缀或更改后缀名等）。
+  👉 **必做前置步骤**：在调用脚本生成图片前，**必须先执行 `ls -la <绝对路径>/scripts/assets/`**，根据哥哥提供的核心词（如“曹双喜”、“女护工”、“西京医院”）模糊匹配并获取当前真实的完整文件名。绝不能凭记忆盲猜文件名，否则会导致脚本运行报错。
   👉 执行示例：`python3 <绝对路径>/scripts/generate_image.py --scenes <场景图绝对路径> --caregivers <护工图绝对路径> --count 1 --output <绝对路径>/scripts/results` 
   *(避坑提示：脚本中直接传 URL 下载网络图片可能遇到超时或防盗链问题，建议先使用 `curl -o` 下载到本地，再将本地绝对路径传给 `--scenes` 参数；为了防止超时，运行脚本时可设置 timeout)*
   👉 生成完成后，Belle 将图片以媒体文件形式 (`MEDIA:<path>`) 发送给哥哥。
