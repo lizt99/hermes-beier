@@ -32,7 +32,7 @@ metadata:
   👉 Belle 会自动生成包含丰富排版的腾讯智能文档 (Smartcanvas)。若哥哥明确要求带配图，或默认流程需要配图：
       1️⃣ 先使用 指令：“生成笔记配图” 例如 xxx医院 xxx护工 照片, 必须使用 --count 2 一次性生成2张图片到本地。
       2️⃣ 调用 `upload_image` 工具获取 2 个 `image_id`。**注意：因为 `mcporter call` 有 CLI 参数长度限制，禁止通过终端命令行传递 base64**。必须使用 Python `httpx` 脚本直接请求 `https://docs.qq.com/openapi/mcp` 端点（鉴权 token 从 `~/.hermes/profiles/belle-clone/home/.mcporter/mcporter.json` 获取），分别上传这两张图片。
-      3️⃣ 在生成的 MDX 文本中连续插入这 2 张图片： `<Image src='image_id_1' />` 和 `<Image src='image_id_2' />`。
+      3️⃣ **【防限流核心规定】**：在生成 MDX 文本时，绝对禁止使用任何固定的文案模板（不要在代码里写死文案）！每次必须调用你的 AI 创造力，根据具体的医院和场景，撰写 100% 原创的内容。强制要求每次更改叙事视角（例如：第一人称家属陪诊日记、第三方客观干货科普、病房见闻实录等），动态调整排版、语气词和 Emoji。确保每篇帖子的查重率极低，避免被小红书判定为营销号限流。在全新的文本中连续插入这 2 张图片： `<Image src='image_id_1' />` 和 `<Image src='image_id_2' />`。
   👉 Belle 会先调用 `tencent-docs` 的 `create_smartcanvas_by_mdx` 生成带排版的文档，然后自动调用 `manage.move_file` 将该帖子移动到腾讯文档 `YJ/HG` 目录下 (Folder ID: `GftErUgfwmaz`)。
   👉 **核心避坑 (mcporter 调用)**：调用带 "." 的工具名 (如 `manage.move_file`) 时，由于 CLI 解析 bug，绝不能用 `mcporter call tencent-docs.manage.move_file`。必须使用显式参数：`mcporter call --server tencent-docs --tool manage.move_file --args '{"file_id":"...","target_folder_id":"GftErUgfwmaz"}' --output json`。
   👉 Belle 返回腾讯文档链接给哥哥，哥哥直接点击复制并发布。
