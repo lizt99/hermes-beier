@@ -38,7 +38,7 @@ metadata:
       - **防限流**：强制每次更改叙事视角，确保查重率极低。
       - **图文排版**：在全新的文本中连续插入这 2 张图片： `<Image src='image_id_1' />` 和 `<Image src='image_id_2' />`。
       *(注：文案中保留私信价格表等钩子承接观望客户，但不要进行“十分钟到场”等过度承诺防范客诉风险，也不要在文案里隐晦提及衣服电话。让客户自然看图即可)*
-  👉 Belle 会先调用 `tencent-docs` 的 `create_smartcanvas_by_mdx` 生成带排版的文档，然后自动调用 `manage.move_file` 将该帖子移动到腾讯文档 `YJ/HG` 目录下 (Folder ID: `GftErUgfwmaz`)。
+  👉 Belle 会先调用 `tencent-docs` 的 `create_smartcanvas_by_mdx` 生成带排版的文档。**注意：创建腾讯文档时的标题 (title 字段) 必须自然、适合直接转发朋友圈（例如 `【优加陪护】西京医院消化内科：王阿姨专业陪护实录`），绝对禁止使用“社媒笔记_SEO版”等内部技术化命名！** 然后自动调用 `manage.move_file` 将该帖子移动到腾讯文档 `YJ/HG` 目录下 (Folder ID: `GftErUgfwmaz`)。
   👉 **核心避坑 (mcporter 调用)**：调用带 "." 的工具名 (如 `manage.move_file`) 时，由于 CLI 解析 bug，绝不能用 `mcporter call tencent-docs.manage.move_file`。必须使用显式参数：`mcporter call --server tencent-docs --tool manage.move_file --args '{"file_id":"...","target_folder_id":"GftErUgfwmaz"}' --output json`。
   👉 Belle 返回腾讯文档链接给哥哥，哥哥直接点击复制并发布。
 - **指令**：“生成笔记配图” 或 哥哥提供现场照片及护工照片要求生成图片
